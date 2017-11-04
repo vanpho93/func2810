@@ -31,9 +31,20 @@ function inHinh3(n) {
     }
 }
 
-function inHinh() {
-    
+function inHinh(n, checkPoint) {
+    for(let i = 1; i <= n; i++) {
+        let s = '';
+        for(let j = 1; j <= n; j++) {
+            const dk = checkPoint(i, j, n);
+            s += dk ? '*' : ' ';
+        }
+        console.log(s);
+    }
 }
+
+inHinh(5, (i, j) => i >= j);
+inHinh(5, (i, j, n) => i + j >= n + 1);
+inHinh(5, (i, j) => i <= j);
 
 function inHinh4(n) {
     for(let i = 1; i <= n; i++) {
@@ -48,4 +59,4 @@ function inHinh4(n) {
     }
 }
 
-inHinh4(5);
+// inHinh4(5);
