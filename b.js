@@ -1,5 +1,5 @@
-function add(a, b) {
+function add(a, b = 4) {
     console.log(a + b);
 } 
 
-console.log(add(4));
+add(4);
